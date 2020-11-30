@@ -33,7 +33,7 @@
             <div class="form-group row">
                 <label for="nom_per" class="col-sm-3 col-form-label">Numéro et titre du module</label>
                 <div class="col-sm-2">
-                    <input type="number" class="form-control" id="nom_module" name="nom_module" placeholder="numéro du module">
+                    <input type="number" class="form-control" id="num_module" name="num_module" placeholder="numéro du module">
                 </div>
                 <div class="col-sm-7">
                     <input type="text" class="form-control" id="nom_module" name="nom_module" placeholder="titre du module">
@@ -44,7 +44,7 @@
             <div class="form-group row">
                 <label for="nom_per" class="col-sm-3 col-form-label">Compétence</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="nom_module" name="nom_competence" placeholder="nom de la compétence">
+                    <input type="text" class="form-control" id="nom_competence" name="nom_competence" placeholder="nom de la compétence">
                 </div>
             </div>
 

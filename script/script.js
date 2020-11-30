@@ -18,4 +18,28 @@ $(function () {
         }).appendTo('#nom_obj');
         index++;
     });
+
+    //-------------------------------------------------VALIDATE--------------------------------------------//
+    var name_rule = "nom_obj_" + index;
+    $("#inscription_form").validate(
+        {
+            rules:{
+                num_module:{
+                  required: true
+                },
+                nom_module:{
+                    required: true
+                },
+                nom_competence:{
+                    required: true
+                },
+                nom_obj_1:{
+                  required: true
+                },
+                name_rule:{
+                    required: true
+                }
+            },
+        }
+    );
 });
