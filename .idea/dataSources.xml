@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Formulaire Modules" uuid="2c0a5d23-49f5-466e-aa7d-a4424eb85053">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\wamp64\www\web\formulaire_module\Formulaire Modules.bmpr</jdbc-url>
+    </data-source>
+  </component>
+</project>
