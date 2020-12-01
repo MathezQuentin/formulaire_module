@@ -6,21 +6,30 @@ $(function () {
             "numero":"100",
             "titre":"Distinguer, préparer et évaluer des données",
             "competence":"Préparer des informations pour une évaluation automatisée, vérifier et interpréter les résultats",
-            "obj1":"Distinguer la caractéristique relative à la structure de données (texte, feuille de donnée, etc.) en vue du traitement respectivement de l´évaluation",
-            "obj2":"Distinguer les caractéristiques relatives au caractère univoque des données (exhaustivité, redondance, incohérence) en vue du traitement, respectivement de l´évaluation",
-            "obj3":"Choisir les informations d´un lot de données sur la base de la caractéristique et qui se prêtent à une évaluation déterminée"
+            "obj":
+            [
+                "Distinguer la caractéristique relative à la structure de données (texte, feuille de donnée, etc.) en vue du traitement respectivement de l´évaluation",
+                "Distinguer les caractéristiques relatives au caractère univoque des données (exhaustivité, redondance, incohérence) en vue du traitement, respectivement de l´évaluation",
+                "Choisir les informations d´un lot de données sur la base de la caractéristique et qui se prêtent à une évaluation déterminée"
+            ]
         },
         {
             "numero":"114",
             "titre":"Mettre en œuvre des systèmes de codification, de compression et d’encryptage",
             "competence":"Mettre en œuvre des systèmes de codification, de compression et d’encryptage",
-            "obj1":"Choisir et utiliser des procédures de compression appropriées d´archivage des informations. Démontrer quels sont les effets de la codification sur la transmission des données",
+            "obj":
+            [
+                "Choisir et utiliser des procédures de compression appropriées d´archivage des informations. Démontrer quels sont les effets de la codification sur la transmission des données",
+            ]
         },
         {
             "numero":"122",
             "titre":"Automatiser des procédures à l’aide de scripts",
-            "obj1":"Représenter graphiquement, dans un diagramme de flux, une fonction ou processus d´automatisation compte tenu des interactions de l´utilisateur",
-            "obj2":"Transposer le diagramme de flux dans un script"
+            "obj":
+                [
+                    "Représenter graphiquement, dans un diagramme de flux, une fonction ou processus d´automatisation compte tenu des interactions de l´utilisateur",
+                    "Transposer le diagramme de flux dans un script"
+                ]
         }
     ];
 
@@ -36,33 +45,28 @@ $(function () {
     }
 
     $('#num_module').autocomplete({
-       source: source
+        source: source
     });
 
     $('#num_module').change(function() {
-        var value = $('#num_module').val();
+        index = 2;
+       for(var i = 0; i < dataAutoC.length; i++){
+           if(dataAutoC[i].numero == $('#num_module').val()){
+               $('#nom_module').val(dataAutoC[i].titre);
+               $('#nom_competence').val(dataAutoC[i].competence);
 
 
-
-        //$('#nom_module').val(dataAutoC[].titre);
-        //$('#nom_competence').val(dataAutoC[key].competence);
+               var num = index - 1;
+               for(var obj of dataAutoC[i].obj){
+                   $('#nom_obj_' + num).val(obj);
+                   if(num < dataAutoC[i].obj.length){
+                       index = CreateField(index);
+                       num++;
+                   }
+               }
+           }
+       }
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     //Validate
     $("#inscription_form").submit(function() {
