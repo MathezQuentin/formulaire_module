@@ -49,14 +49,18 @@ $(function () {
     });
 
     $('#num_module').change(function() {
+        var num = index - 1;
+
+        for(var i = 1; i <= num; i++){
+            $('#inscription_form').removeChild($('#nom_obj_' + i));
+        }
+
         index = 2;
        for(var i = 0; i < dataAutoC.length; i++){
            if(dataAutoC[i].numero == $('#num_module').val()){
                $('#nom_module').val(dataAutoC[i].titre);
                $('#nom_competence').val(dataAutoC[i].competence);
 
-
-               var num = index - 1;
                for(var obj of dataAutoC[i].obj){
                    $('#nom_obj_' + num).val(obj);
                    if(num < dataAutoC[i].obj.length){

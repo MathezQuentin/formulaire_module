@@ -36,7 +36,7 @@
                 <label for="nom_per" class="col-sm-3 col-form-label">Numéro et titre du module</label>
                 <div class="col-sm-2">
                     <!--<input type="number" class="form-control" id="num_module" name="num_module" min="1" placeholder="numéro du module">-->
-                    <input type="text" class="form-control" id="num_module" name="num_module" min="1" placeholder="numéro du module">
+                    <input type="number" class="form-control" id="num_module" name="num_module" min="1" placeholder="numéro du module">
                 </div>
                 <div class="col-sm-7">
                     <input type="text" class="form-control" id="nom_module" name="nom_module" placeholder="titre du module">
@@ -88,6 +88,5 @@
     </div>
 </div>
 <script src="script/validation.js"></script>
-<!--<script src="script/autocomplete.js"></script>-->
 </body>
 </html>
